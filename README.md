@@ -3,10 +3,10 @@ This repo explains on how to use tensorflowlite
 
 
 Explaining Post-Training Quantization
+
 Post-Training Quantization (PTQ) in TensorFlow (specifically for TensorFlow Lite) is an optimization technique that you apply after your machine learning model has been fully trained using standard 32-bit floating-point precision. The goal is to convert the model's weights and activations to lower-precision formats (like 8-bit integers or 16-bit floats) to reduce model size and improve inference speed, particularly for deployment on edge devices.
 
 Here's a detailed breakdown of how PTQ works with TensorFlow:
-
 The Core Idea
 Instead of modifying the training process (as in Quantization-Aware Training), PTQ takes an already trained model and, during its conversion to the TensorFlow Lite format (.tflite), it applies the quantization logic. This makes it a very convenient and often sufficient approach for many use cases, as it doesn't require retraining or fine-tuning.
 
